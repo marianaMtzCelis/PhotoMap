@@ -21,9 +21,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcu-U0-7is">
-                                <rect key="frame" x="179" y="781" width="57" height="58"/>
+                                <rect key="frame" x="155" y="644" width="57" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="camera-l"/>
+                                <connections>
+                                    <action selector="onCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UMe-gN-SKr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hr1-tA-YSu">
+                                <rect key="frame" x="228" y="654" width="32" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="camera"/>
+                                <connections>
+                                    <action selector="onLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UT2-dK-qdh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -158,6 +169,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" width="30" height="30"/>
         <image name="camera-l" width="30" height="30"/>
     </resources>
 </document>
