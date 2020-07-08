@@ -13,6 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
+@property (strong, nonatomic) UIImage *originalImage;
+
 @end
 
 @implementation PhotoMapViewController
@@ -62,12 +64,12 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
     // Get the image captured by the UIImagePickerController
-    UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
-    UIImage *editedImage = info[UIImagePickerControllerEditedImage];
+    self.originalImage = info[UIImagePickerControllerOriginalImage];
 
     // Do something with the images (based on your use case)
     
     // Dismiss UIImagePickerController to go back to your original view controller
+    [self performSegueWithIdentifier:@"tagSegue" sender:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
